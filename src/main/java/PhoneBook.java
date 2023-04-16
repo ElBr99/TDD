@@ -1,16 +1,18 @@
-import java.util.HashMap;
-import java.util.Map;
+import org.apache.commons.collections4.BidiMap;
+import org.apache.commons.collections4.bidimap.TreeBidiMap;
 
 public class PhoneBook {
-    Map<String, Long> map = new HashMap<>();
+
+    BidiMap<String, Long> bimap = new TreeBidiMap<>();
+
 
     public int add(String name, long number) {
-        map.put(name, number);
-        return map.size();
+        bimap.put(name, number);
+        return bimap.size();
     }
 
-    public String findByNumber (long number) {
-        return null;
+    public String findByNumber(long number) {
+       return bimap.getKey(number);
     }
 
 }
