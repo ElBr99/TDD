@@ -28,4 +28,17 @@ public class PhoneBookTest {
         Assertions.assertEquals("Sveta", name);
 
     }
+
+
+    @Test
+    void findByName() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Ivan", 89521458963L);
+        phoneBook.add("Sveta", 89063415658L);
+
+        Long number = phoneBook.findByName("Sveta");
+
+        Assertions.assertEquals(89063415658L, number);
+
+    }
 }

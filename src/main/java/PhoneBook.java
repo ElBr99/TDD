@@ -12,7 +12,11 @@ public class PhoneBook {
     }
 
     public String findByNumber(long number) {
-       return bimap.getKey(number);
+        return bimap.getKey(number);
+    }
+
+    public Long findByName(String name) {
+        return null;
     }
 
 }
