@@ -1,7 +1,10 @@
+import org.junit.Assert;
+import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class PhoneBookTest {
+    private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
 
     @Test
     void add() {
@@ -40,5 +43,16 @@ public class PhoneBookTest {
 
         Assertions.assertEquals(89063415658L, number);
 
+    }
+
+    @Test
+    void printAllNames() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Ivan", 89521458963L);
+        phoneBook.add("Sveta", 89063415658L);
+
+        phoneBook.printAllNames();
+
+        Assert.assertEquals("Ivan, Sveta", systemOutRule.getLog().trim());
     }
 }
