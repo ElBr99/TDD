@@ -1,11 +1,9 @@
-import org.junit.Assert;
-import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class PhoneBookTest {
-    private final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
+import static com.github.stefanbirkner.systemlambda.SystemLambda.tapSystemOut;
 
+public class PhoneBookTest {
     @Test
     void add() {
         PhoneBook phoneBook = new PhoneBook();
@@ -46,13 +44,13 @@ public class PhoneBookTest {
     }
 
     @Test
-    void printAllNames() {
+    void printAllNames() throws Exception {
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Ivan", 89521458963L);
         phoneBook.add("Sveta", 89063415658L);
 
-        phoneBook.printAllNames();
+        String text = tapSystemOut(phoneBook::printAllNames);
 
-        Assert.assertEquals("Ivan, Sveta", systemOutRule.getLog().trim());
+        Assertions.assertEquals("[Ivan, Sveta]", text.trim());
     }
 }

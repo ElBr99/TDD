@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e7cbbd6-4354-4d68-9c7d-8acd9410a4e7" name="Changes" comment="findByName implemented">
+    <list default="true" id="1e7cbbd6-4354-4d68-9c7d-8acd9410a4e7" name="Changes" comment="Stub and tests for printAllNames">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PhoneBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PhoneBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PhoneBookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PhoneBookTest.java" afterDir="false" />
@@ -69,9 +70,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PhoneBookTest.printAllNames" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="task1-tdd" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PhoneBookTest" />
+      <option name="METHOD_NAME" value="printAllNames" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.PhoneBookTest" />
+        <item itemvalue="JUnit.PhoneBookTest.printAllNames" />
         <item itemvalue="JUnit.PhoneBookTest.findByNumber" />
       </list>
     </recent_temporary>
@@ -134,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681663107494</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Stub and tests for printAllNames">
+      <created>1681665765004</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681665765005</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,6 +175,7 @@
     <MESSAGE value="findByNumber implemented" />
     <MESSAGE value="Stub and tests for findByName" />
     <MESSAGE value="findByName implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="findByName implemented" />
+    <MESSAGE value="Stub and tests for printAllNames" />
+    <option name="LAST_COMMIT_MESSAGE" value="Stub and tests for printAllNames" />
   </component>
 </project>
